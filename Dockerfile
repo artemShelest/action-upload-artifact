@@ -17,4 +17,4 @@ RUN sh -c "curl --silent -L https://github.com/${GHR_FORK}/releases/download/v${
 
 COPY entrypoint.sh /usr/local/bin/
 
-ENTRYPOINT ["/usr/local/bin/ghr-wrapper.sh"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

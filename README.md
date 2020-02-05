@@ -4,12 +4,11 @@ GitHub Action to upload artifacts to GitHub releases using [ghr](https://github.
 
 ## Secrets
 
-- `GITHUB_TOKEN` — **Required.** Grants access to the repository.
+- `GITHUB_TOKEN` — **required,** repository access token.
 
 ## Variables
 
-- `SOURCE_PATH` — **Required.**
-  Path to the artifacts to upload. Specify a file or a directory.
+- `RESOURCE_PATH` — **required,** path to the artifacts to upload. Specify a file or a directory.
   If you provide a directory, all files in that directory will be uploaded.
 
 ## Usage example
@@ -32,7 +31,7 @@ jobs:
       - name: Upload
         uses: artemShelest/action-upload-artifact@master
         env:
-          SOURCE_PATH: dist.zip
+          RESOURCE_PATH: dist.zip
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 ```
